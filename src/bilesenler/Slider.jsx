@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import { useState } from "react";
-
+import { sliderFotograflari } from "../veri";
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
 
-  transform: translateX(-100vw);
+  transform: translateX(${(props) => props.fotograf * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -76,46 +76,33 @@ const Buton = styled.button`
 `;
 
 const Slider = () => {
-  const [fotograf, fotografiuncelle] = useState(0);
-  const resmiDegistir = (direction) => {};
+  const [fotograf, fotografiGuncelle] = useState(0);
+  const resmiDegistir = (direction) => {
+    if (direction === "left") {
+      fotografiGuncelle(fotograf > 0 ? fotograf - 1 : 2);
+    } else {
+      fotografiGuncelle(fotograf > 2 ? fotograf + 1 : 0);
+    }
+  };
 
   return (
     <Container>
       <Arrow direction='left' onClick={() => resmiDegistir("left")}>
         <ArrowLeftOutlined />
       </Arrow>
-      <Wrapper>
-        <Slide bg='fcf1ed'>
-          <ImgContainer>
-            <Image src='https://i.hizliresim.com/ozv2j1o.' />
-          </ImgContainer>
-          <InfoContainer>
-            <Baslik>Lorem, ipsum dolor.</Baslik>
-            <Bilgi>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </Bilgi>
-            <Buton>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              quos repudiandae sed iure veritatis!
-            </Buton>
-          </InfoContainer>
-        </Slide>
-
-        <Slide bg='f5fafd'>
-          <ImgContainer>
-            <Image src='https://i.hizliresim.com/gnrehai.jpg' />
-          </ImgContainer>
-          <InfoContainer>
-            <Baslik>Lorem, ipsum dolor.</Baslik>
-            <Bilgi>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </Bilgi>
-            <Buton>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              quos repudiandae sed iure veritatis!
-            </Buton>
-          </InfoContainer>
-        </Slide>
+      <Wrapper fotograf={fotograf}>
+        {sliderFotograflari.map((item) => (
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Baslik>{item.title}</Baslik>
+              <Bilgi>{item.desc}</Bilgi>
+              <Buton>Detaylar</Buton>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
 
       <Arrow direction='right' onClick={() => resmiDegistir("right")}>
