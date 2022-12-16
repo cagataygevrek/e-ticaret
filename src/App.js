@@ -1,7 +1,9 @@
-import React from "react";
+//import React from "react";
+
+import HomePage from "./sayfalar/HomePage";
 
 const App = () => {
-  return <div>hello world</div>;
+  return <HomePage />;
 };
 
 export default App;
