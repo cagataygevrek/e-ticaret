@@ -21,3 +21,21 @@ export const sliderFotograflari = [
     bg: "fbf0f4",
   },
 ];
+
+export const kategoriler = [
+  {
+    id: 1,
+    img: "https://i.hizliresim.com/2o5vvrs.jpg",
+    title: "MacBook Air MLY33TU/A",
+  },
+  {
+    id: 2,
+    img: "https://i.hizliresim.com/d4fks4g.jpg",
+    title: "iPad 10.Nesil 64GB Wi-Fi",
+  },
+  {
+    id: 3,
+    img: "https://i.hizliresim.com/m06093k.jpg",
+    title: "Huawei Matebook D15",
+  },
+];
