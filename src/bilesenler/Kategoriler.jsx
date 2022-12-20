@@ -12,7 +12,7 @@ const Kategoriler = () => {
   return (
     <Container>
       {kategoriler.map((item) => (
-        <KategoriItem item={item} />
+        <KategoriItem item={item} key={item.id} />
       ))}
     </Container>
   );
