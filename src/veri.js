@@ -39,3 +39,38 @@ export const kategoriler = [
     title: "Huawei Matebook D15",
   },
 ];
+
+export const populerUrunler = [
+  {
+    id: 1,
+    img: "https://i.hizliresim.com/9ass8p5.jpg",
+  },
+  {
+    id: 2,
+    img: "https://i.hizliresim.com/bp1wxdz.jpg",
+  },
+  {
+    id: 3,
+    img: "https://i.hizliresim.com/atj2jp0.jpg",
+  },
+  {
+    id: 4,
+    img: "https://i.hizliresim.com/9mue56h.jpg",
+  },
+  {
+    id: 5,
+    img: "https://i.hizliresim.com/qp5lqgm.jpg",
+  },
+  {
+    id: 6,
+    img: "https://i.hizliresim.com/ntopg0t.jpg",
+  },
+  {
+    id: 7,
+    img: "https://i.hizliresim.com/f460orl.jpg",
+  },
+  {
+    id: 8,
+    img: "https://i.hizliresim.com/h06zajg.jpg",
+  },
+];
