@@ -1,5 +1,6 @@
 import React from "react";
 import Duyurular from "../bilesenler/Duyurular";
+import Footer from "../bilesenler/Footer";
 import Kategoriler from "../bilesenler/Kategoriler";
 
 import Navbar from "../bilesenler/Navbar";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Kategoriler />
       <Urunler />
       <Urunbildirimi />
+      <Footer />
     </div>
   );
 };
