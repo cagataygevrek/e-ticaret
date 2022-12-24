@@ -1,9 +1,10 @@
 //import React from "react";
 
-import HomePage from "./sayfalar/HomePage";
+import UrunlerListesi from "./bilesenler/UrunlerListesi";
+//import HomePage from "./sayfalar/HomePage";
 
 const App = () => {
-  return <HomePage />;
+  return <UrunlerListesi />;
 };
 
 export default App;
